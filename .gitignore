@@ -1,0 +1,25 @@
+# data is downloaded by the notebook
+data/
+
+# Python / Jupyter / CatBoost
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+catboost_info/
+.venv/
+
+# LaTeX build files
+reports/latex/*.aux
+reports/latex/*.log
+reports/latex/*.out
+reports/latex/*.toc
+reports/latex/*.lof
+reports/latex/*.lot
+reports/*.aux
+reports/*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

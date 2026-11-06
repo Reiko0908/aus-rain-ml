@@ -1,0 +1,9 @@
+# Preinstalled on Google Colab except catboost (the notebook installs it automatically)
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.4
+matplotlib>=3.7
+seaborn>=0.12
+h5py>=3.8
+torch>=2.0
+catboost>=1.2
