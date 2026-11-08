@@ -1,0 +1,5 @@
+split,name,accuracy,f1_macro,roc_auc
+random split,LR,0.8468,0.7509,0.8718
+random split,CatBoost (one-hot),0.8633,0.7805,0.8977
+chronological split,LR,0.8543,0.7351,0.8679
+chronological split,CatBoost (one-hot),0.8641,0.756,0.8897

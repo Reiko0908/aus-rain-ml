@@ -1,0 +1,11 @@
+name,model,scaler,feature_range,pca,encoder,cat_imputer,num_imputer,outliers,log_skewed,model_params,train_subsample,n_encoded,n_features,accuracy,precision,recall,f1,f1_macro,roc_auc,fit_s,predict_s,family
+LR | StandardScaler | no PCA (recommended),lr,standard,,none,onehot,constant,median,none,False,{},,120,120,0.8543,0.7335,0.4495,0.5574,0.7351,0.8679,1.58,0.11,LR
+"LR | MinMax(0,1) | no PCA",lr,minmax,"(0, 1)",none,onehot,constant,median,none,False,{},,120,120,0.8545,0.7373,0.446,0.5558,0.7344,0.8675,2.43,0.12,LR
+LR | StandardScaler | PCA 95%,lr,standard,,0.95,onehot,constant,median,none,False,{},,120,96,0.8403,0.7063,0.3728,0.488,0.6967,0.844,3.92,0.16,LR
+"RBF-SVM | clip + MinMax(0,1) | PCA 95% (recommended)",svm,minmax,"(0, 1)",0.95,onehot,constant,median,quantile,False,{},20000,120,92,0.8503,0.7539,0.3962,0.5194,0.7154,0.8541,17.12,32.88,RBF-SVM
+"RBF-SVM | MinMax(0,1) | PCA 95% (no clipping)",svm,minmax,"(0, 1)",0.95,onehot,constant,median,none,False,{},20000,120,90,0.8458,0.74,0.3771,0.4996,0.7042,0.8499,16.82,31.21,RBF-SVM
+RBF-SVM | clip + StandardScaler | PCA 95%,svm,standard,,0.95,onehot,constant,median,quantile,False,{},20000,120,96,0.8493,0.7628,0.3797,0.507,0.709,0.8552,13.58,31.06,RBF-SVM
+"RBF-SVM | clip + MinMax(0,1) | no PCA",svm,minmax,"(0, 1)",none,onehot,constant,median,quantile,False,{},20000,120,120,0.857,0.7816,0.4159,0.5429,0.7291,0.8693,15.91,33.57,RBF-SVM
+"CatBoost | native categoricals, no scaler, no PCA (recommended)",catboost_native,none,,none,native,constant,median,none,False,{},,22,22,0.8683,0.7659,0.511,0.613,0.7668,0.8941,41.7,0.13,CatBoost
+"CatBoost | one-hot, no scaler, no PCA",catboost,none,,none,onehot,constant,median,none,False,{},,120,120,0.8641,0.7616,0.4864,0.5937,0.756,0.8897,9.29,0.14,CatBoost
+"CatBoost | one-hot, StandardScaler, PCA 95%",catboost,standard,,0.95,onehot,constant,median,none,False,{},,120,96,0.8494,0.7331,0.4125,0.5279,0.7192,0.8689,23.68,0.19,CatBoost

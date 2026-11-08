@@ -1,0 +1,47 @@
+{
+  "selected_configs": {
+    "LR": {
+      "model": "lr",
+      "scaler": "standard",
+      "pca": null,
+      "num_imputer": "iterative",
+      "name": "LR (tuned)",
+      "model_params": "{'C': 1.0, 'class_weight': None}"
+    },
+    "RBF-SVM": {
+      "model": "svm",
+      "scaler": "minmax",
+      "feature_range": "(0, 1)",
+      "pca": 0.95,
+      "outliers": "quantile",
+      "train_subsample": 20000,
+      "name": "RBF-SVM (tuned)",
+      "model_params": "{'C': 1.0, 'class_weight': 'balanced'}"
+    },
+    "CatBoost": {
+      "name": "CatBoost (tuned)",
+      "model": "catboost_native",
+      "model_params": "{'depth': 8, 'iterations': 500, 'learning_rate': 0.1}"
+    }
+  },
+  "mlp": {
+    "hidden": [
+      256,
+      128
+    ],
+    "dropout": 0.2,
+    "max_emb_dim": 16,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 512,
+    "max_epochs": 60,
+    "patience": 8,
+    "min_cat_freq": 10,
+    "seed": 0,
+    "best_epoch": 18,
+    "n_parameters": 50041,
+    "train_seconds": 66.1
+  },
+  "fast_mode": false,
+  "device": "cpu"
+}
