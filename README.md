@@ -4,7 +4,7 @@ Course assignment, **Task 1: Machine Learning with Tabular Data**.
 
 | | |
 |---|---|
-| **Course** | Machine Learning (Học Máy) |
+| **Course** | Machine Learning |
 | **Course code** | `CO3117` |
 | **Semester / academic year** | Semester I, 2026–2027 |
 | **University** | Faculty of Computer Science and Engineering, Ho Chi Minh City University of Technology (HCMUT), VNU-HCM |
@@ -48,7 +48,7 @@ Full analysis: [`reports/report.pdf`](reports/report.pdf).
 ## How to run
 
 ### Google Colab (recommended)
-1. Open the notebook: `<COLAB LINK>` (or upload `notebooks/Task1_Tabular_WeatherAUS.ipynb` to Colab).
+1. Open the notebook: `https://colab.research.google.com/drive/17wknJhTfAxLXYbOUoGstz2TAj5MkEylA?usp=sharing` (or upload `notebooks/Task1_Tabular_WeatherAUS.ipynb` to Colab).
 2. `Runtime → Run all`.
 
 The first code cell clones this repository (set `REPO_URL` to this repo's URL), installs `catboost` if missing, and the data is downloaded automatically from the public link above — **no Google Drive mounting is needed**.
