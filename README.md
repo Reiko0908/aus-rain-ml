@@ -43,7 +43,7 @@ Course assignment, **Task 1: Machine Learning with Tabular Data**.
 
 Key findings: CatBoost and the MLP are essentially tied and clearly ahead of LR and the SVM; PCA lowered macro-F1 for every model while compressing only 20–23%; iterative imputation was the most useful preprocessing change; one-hot beat ordinal and target encoding; the SVM's low accuracy comes from `class_weight="balanced"`, which was chosen on validation macro-F1 and makes it flag many dry days as rain (precision 0.53).
 
-Full analysis: [`reports/report.pdf`](reports/report.pdf).
+Full analysis: [`reports/261_MachineLearning_Group10_Report.pdf`](reports/261_MachineLearning_Group10_Report.pdf).
 
 ## How to run
 
@@ -82,7 +82,7 @@ Python ≥ 3.10, numpy, pandas ≥ 2.0, scikit-learn ≥ 1.4, matplotlib, h5py, 
 │   └── plot_style.py       # shared figure style
 ├── features/               # extracted feature matrices (.h5 / .npy) + trained MLP
 ├── reports/
-│   ├── report.pdf          # final report
+│   ├── 261_MachineLearning_Group10_Report.pdf   # final report
 │   ├── figures/            # all figures used in the report
 │   └── results/            # every experiment result as CSV / JSON
 ├── requirements.txt
@@ -94,7 +94,7 @@ Python ≥ 3.10, numpy, pandas ≥ 2.0, scikit-learn ≥ 1.4, matplotlib, h5py, 
 | File | Content |
 |---|---|
 | `lr_features.h5` | Logistic Regression pipeline output: imputed, one-hot encoded, standardised matrix (train / val / test) |
-| `svm_features.h5`, `svm_pca_*.npy` | RBF-SVM pipeline output: clipped, MinMax-scaled, PCA-reduced matrix |
+| `svm_pca_*.npy` (also `svm_features.h5` on GitHub) | RBF-SVM pipeline output: clipped, MinMax-scaled, PCA-reduced matrix |
 | `mlp_hidden_features.h5` | MLP learned representation (128-d last hidden layer) for train / val / test |
 | `mlp_embeddings.pt` | Trained MLP: weights, preprocessing state and training history |
 
@@ -110,5 +110,5 @@ with h5py.File("features/lr_features.h5") as f:
 Australian Bureau of Meteorology, Climate Data Online (<http://www.bom.gov.au/climate/data>); table distributed with the R package `rattle` (G. Williams) and on Kaggle ("Rain in Australia").
 
 ## Links
-- Report: [`reports/report.pdf`](reports/report.pdf)
-- Colab notebook: https://colab.research.google.com/drive/17wknJhTfAxLXYbOUoGstz2TAj5MkEylA?usp=sharing
+- Report: [`reports/261_MachineLearning_Group10_Report.pdf`](reports/261_MachineLearning_Group10_Report.pdf)
+- Colab notebook: [`Colab Notebook`](https://colab.research.google.com/drive/17wknJhTfAxLXYbOUoGstz2TAj5MkEylA?usp=sharing)
